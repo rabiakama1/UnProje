@@ -17,20 +17,20 @@ android {
     }
     buildTypes {
         debug{
-            buildConfigField('String', "ApiKey", MOVIE_API_KEY)
-            resValue('string',"api_key",MOVIE_API_KEY)
-            buildConfigField('String', "ApiURL", MOVIE_URL)
-            resValue('string',"api_url",MOVIE_URL)
+            buildConfigField('String', "NewsApiKey", NEWS_API_KEY)
+            resValue('string',"news_api_key",NEWS_API_KEY)
+            buildConfigField('String', "NewsURL", NEWS_URL)
+            resValue('string',"news_url",NEWS_URL)
 
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField( 'String', "ApiKey", MOVIE_API_KEY)
-            resValue('string',"api_key",MOVIE_API_KEY)
-            buildConfigField('String', "ApiURL", MOVIE_URL)
-            resValue('string',"api_url",MOVIE_URL)
+            buildConfigField('String', "NewsApiKey", NEWS_API_KEY)
+            resValue('string',"news_api_key",NEWS_API_KEY)
+            buildConfigField('String', "NewsURL", NEWS_URL)
+            resValue('string',"news_url",NEWS_URL)
 
         }
     }
@@ -48,6 +48,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.0'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
 

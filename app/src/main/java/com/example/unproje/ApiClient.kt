@@ -19,12 +19,10 @@ object ApiClient {
         clientBuilder.addInterceptor(loggingInterceptor)
         if (retrofit == null) {
             retrofit = Retrofit.Builder()
-                .baseUrl(BuildConfig.ApiURL)
+                .baseUrl(BuildConfig.NewsURL)
                 .client(clientBuilder.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-
-
         }
         return retrofit
     }
