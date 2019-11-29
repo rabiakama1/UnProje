@@ -10,7 +10,8 @@ interface ApiService {
     fun getCard(
         @Query("apiKey")key:String,
         @Query("country")country:String,
-        @Query("category")category:String
+        @Query("category")category:String,
+        @Query("pageSize")page:Int
 
     ):Call<NewsResponse>
 

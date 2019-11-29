@@ -16,6 +16,8 @@ class News :  Serializable {
     private var title: String? = null
     @SerializedName("urlToImage")
     private  var urlToImage: String?=null
+    @SerializedName("content")
+    private  var content: String?=null
 
 
     fun getName(): String? {
@@ -24,6 +26,14 @@ class News :  Serializable {
 
     fun setName(name: String?) {
         this.name = name
+    }
+
+    fun getCont(): String? {
+        return content
+    }
+
+    fun setCont(content: String?) {
+        this.content = content
     }
 
     fun getTitle(): String? {

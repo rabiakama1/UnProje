@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.recyclerview.widget.*
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -34,23 +36,22 @@ class MainActivity : AppCompatActivity() {
             initViews()
         }
         loadNews()
+
+        val swipeHandler = object : SwipeforDeleteCallback(this) {
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val adapter = recylerView_main.adapter as NewsAdapter
+                adapter.removeItem(viewHolder.adapterPosition)
+                Snackbar.make(
+                    layout,
+                    "Haber listeden silindi!",
+                    Snackbar.LENGTH_SHORT
+                ).show()
+            }
+        }
+        val itemTouchHelper = ItemTouchHelper(swipeHandler)
+        itemTouchHelper.attachToRecyclerView(recylerView_main)
     }
 
-/*    val itemTouchHelperCallback=object:ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT or ItemTouchHelper.LEFT){
-        override fun onMove(
-            p0: RecyclerView,
-            p1: RecyclerView.ViewHolder,
-            p2: RecyclerView.ViewHolder
-        ): Boolean {
-                return false
-        }
-
-        override fun onSwiped(viewHolder: RecyclerView.ViewHolder, position: Int) {
-
-            newsAdapter!!.removeItemfromList(viewHolder)
-        }
-
-    }*/
 
     private fun displayData() {
 
