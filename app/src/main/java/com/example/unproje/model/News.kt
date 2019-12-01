@@ -8,6 +8,8 @@ class News :  Serializable {
 
     @SerializedName("id")
     private var  id: String?=null
+    @SerializedName("source")
+    private var source: Any?=null
     @SerializedName("name")
     private var  name: String?=null
     @SerializedName("description")
@@ -20,29 +22,11 @@ class News :  Serializable {
     private  var content: String?=null
 
 
-    fun getName(): String? {
-        return name
-    }
-
-    fun setName(name: String?) {
-        this.name = name
-    }
-
-    fun getCont(): String? {
-        return content
-    }
-
-    fun setCont(content: String?) {
-        this.content = content
-    }
-
     fun getTitle(): String? {
         return title
     }
 
-    fun setTitle(title: String?) {
-        this.title = title
-    }
+
 
     fun getDesc(): String? {
         return description
@@ -67,6 +51,7 @@ class News :  Serializable {
     fun setId(id: String?) {
         this.id = id
     }
+
 
 
 }

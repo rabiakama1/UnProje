@@ -1,4 +1,4 @@
-package com.example.unproje.service
+package com.example.unproje.model
 
 import com.example.unproje.model.News
 import com.google.gson.annotations.SerializedName

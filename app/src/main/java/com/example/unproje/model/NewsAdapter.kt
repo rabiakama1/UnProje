@@ -3,6 +3,7 @@ package com.example.unproje.model
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -52,4 +53,5 @@ class NewsAdapter(var newsList:MutableList<News>): RecyclerView.Adapter<NewsAdap
 
         }
     }
+
 }

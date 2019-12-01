@@ -1,10 +1,12 @@
 package com.example.unproje
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcelable
+import android.widget.AdapterView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.*
@@ -13,7 +15,7 @@ import com.example.unproje.data.Repository
 import com.example.unproje.model.News
 import com.example.unproje.model.NewsAdapter
 import com.example.unproje.service.ApiService
-import com.example.unproje.service.NewsResponse
+import com.example.unproje.model.NewsResponse
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -57,7 +59,6 @@ class MainActivity : AppCompatActivity() {
         val itemTouchHelper = ItemTouchHelper(swipeHandler)
         itemTouchHelper.attachToRecyclerView(recylerView_main)
     }
-
 
     private fun displayData() {
 
