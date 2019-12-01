@@ -1,5 +1,6 @@
-package com.example.unproje
+package com.example.unproje.service
 
+import com.example.unproje.model.News
 import com.google.gson.annotations.SerializedName
 
 class NewsResponse {

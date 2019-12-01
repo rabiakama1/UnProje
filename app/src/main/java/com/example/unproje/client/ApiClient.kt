@@ -1,5 +1,6 @@
-package com.example.unproje
+package com.example.unproje.client
 
+import com.example.unproje.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

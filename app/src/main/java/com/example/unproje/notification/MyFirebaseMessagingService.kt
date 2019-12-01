@@ -1,4 +1,4 @@
-package com.example.unproje
+package com.example.unproje.notification
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -9,10 +9,13 @@ import android.media.RingtoneManager
 import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
+import com.example.unproje.MainActivity
+import com.example.unproje.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
+    //Push Not. işlemi
 
     val TAG = String::class.java.simpleName
 
@@ -20,7 +23,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
         Log.d(TAG, "From: ${remoteMessage.from}")
 
-        // Check if message contains a data payload.
         remoteMessage.data.isNotEmpty().let {
             Log.d(TAG, "Message data payload: " + remoteMessage.data)
 

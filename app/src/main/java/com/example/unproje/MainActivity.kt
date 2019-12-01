@@ -5,10 +5,15 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcelable
-import android.view.View
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.*
+import com.example.unproje.client.ApiClient
+import com.example.unproje.data.Repository
+import com.example.unproje.model.News
+import com.example.unproje.model.NewsAdapter
+import com.example.unproje.service.ApiService
+import com.example.unproje.service.NewsResponse
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -25,7 +30,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        repository = Repository(ApiClient.getClient()!!.create(ApiService::class.java))
+        repository =
+            Repository(ApiClient.getClient()!!.create(ApiService::class.java))
 
         var mLayoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
         recylerView_main.layoutManager = mLayoutManager
