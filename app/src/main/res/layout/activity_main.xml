@@ -11,8 +11,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
+        <TextView
+            android:background="#74972626"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:id="@+id/textView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="En Yeni Haberler" />
+
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@color/backgroundColor"
             android:id="@+id/recylerView_main"
             tools:listitem="@layout/movie_item"

@@ -104,14 +104,19 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<NewsResponse>, t: Throwable) {
-                    //showError("Error")
+                    showError("Hata")
 
                 }
             })
         } catch (e: Exception) {
-            //showError("Error")
+            showError("Hata")
         }
     }
 
+    private fun showError(s: String) {
+
+        Toast.makeText(this,"Hata.",Toast.LENGTH_SHORT).show()
     }
+
+}
 
