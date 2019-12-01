@@ -12,3 +12,8 @@ Ekran Görüntüleri:
 2.Silme İşlemi
 
 ![aciklama png](https://user-images.githubusercontent.com/53082767/69913240-7156c680-1446-11ea-87f6-f648c974651b.jpg)
+
+
+3.Bildirim Gönderme İşlemi
+
+![push](https://user-images.githubusercontent.com/53082767/69913417-7c125b00-1448-11ea-9aa9-59263ea58187.jpg)
